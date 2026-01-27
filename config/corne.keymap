@@ -33,12 +33,12 @@
             // |none |  [  |  (  |  )  |  ]  | "|" |   |  -  |  4  |  5  |  6  |  +  | DEL |
             // |none |LALT |  {  |  }  |  @  |PRTSC|   |  .  |  1  |  2  |  3  |  %  |none |
             //                   | GUI | LWR | SPC |   | ENT |  ,  |  0  |
-            
-        bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+
+            bindings = <
+&trans  &kp DQT   &kp LESS_THAN         &kp GREATER_THAN  &kp POUND    &kp BSLH           &kp FSLH   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp STAR     &kp BSPC
+&trans  &kp LBKT  &kp LEFT_PARENTHESIS  &kp RPAR          &kp RBKT     &kp PIPE           &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS     &kp DEL
+&trans  &kp LALT  &kp LEFT_BRACE        &kp RIGHT_BRACE   &kp AT_SIGN  &kp PRINTSCREEN    &kp DOT    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT  &trans
+                                        &trans            &trans       &trans             &trans     &kp KP_COMMA     &kp KP_NUMBER_0
             >;
         };
 
@@ -48,7 +48,7 @@
             // |     |     |  `  |  ¨  |  €  |  $  |   |HOME | LFT | UP  | DWN | RGT | END  |
             // |     |     |     |  Æ  |  À  |  Ç  |   |     |PG DW|SCRDW|     |     |      |
             //                   | GUI |LSHFT| SPC |   |none | RSE |none |
-            
+
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -56,7 +56,8 @@
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
-         Media_layer {
+
+        Media_layer {
             // --------------------------------------------------------------------------------
             // |     |     |     |     |     |     |   |     |     |     |     |     |     |
             // |     |     |     |     |     |     |   |     |     |     |     |     |     |
@@ -64,19 +65,18 @@
             //                   |     |     |     |   |     |     |     |
 
             bindings = <
-        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
 };
 
-            // Tamplate
-            // --------------------------------------------------------------------------------
-            // |     |     |     |     |     |     |   |     |     |     |     |     |     |
-            // |     |     |     |     |     |     |   |     |     |     |     |     |     |
-            // |     |     |     |     |     |     |   |     |     |     |     |     |     |
-            //                   |     |     |     |   |     |     |     |
-            
+// Tamplate
+// --------------------------------------------------------------------------------
+// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+//                   |     |     |     |   |     |     |     |
