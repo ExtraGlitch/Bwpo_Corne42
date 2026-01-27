@@ -6,7 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include keymap_bepo.h
+#include "keymap_bepo.h"
 
 / {
     keymap {
