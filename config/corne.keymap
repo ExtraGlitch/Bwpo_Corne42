@@ -14,8 +14,8 @@
 
         default_layer {
             // ---------------------------------------------------------------------------------
-            // | ESC |  B  |  W  |  P  |  O  |  ?  |   |  !  |  V  |  D  |  L  |  J  |BSPC |
-            // | TAB |  A  |  U  |  I  |  E  |  ,  |   |  C  |  T  |  S  |  R  |  N  | DEL |
+            // | ESC |  B  |  W  |  P  |  O  | ?/' |   | !/^ |  V  |  D  |  L  |  J  |BSPC |
+            // | TAB |  A  |  U  |  I  |  E  | ,/; |   |  C  |  T  |  S  |  R  |  N  | DEL |
             // |LCTRL|  Z  |  Y  |  X  |  .  |  K  |   |  M  |  Q  |  R  |  H  |  F  |RSHFT|
             //                     | GUI | LWR | SPC |   | ENT | RSE | ALT |
 
@@ -29,14 +29,14 @@
 
         lower_layer {
             // --------------------------------------------------------------------------------
-            // |none |  "  |  <  |  >  |  #  |  \  |   |  /  |  7  |  8  |  9  |  *  |BSPC |
-            // |none |  [  |  (  |  )  |  ]  | "|" |   |  -  |  4  |  5  |  6  |  +  | DEL |
-            // |none |LALT |  {  |  }  |  @  |PRTSC|   |  .  |  1  |  2  |  3  |  %  |none |
-            //                   | GUI | LWR | SPC |   | ENT |  ,  |  0  |
+            // |trans| "|" |  É  |  &  |  È  |  Œ  |   |  "  |trans|  [  |  ]  |trans|trans|
+            // |trans|  Æ  |  (  |  ¨  |  €  |  '  |   |  #  |  {  |  (  |  )  |  }  |trans|
+            // |trans|  /  |  \  |  Ç  |  $  |PRTSC|   |  ~  |  «  |  <  |  >  |  »  |trans|
+            //                   |trans| LWR |trans|   |trans|trans|trans|
 
             bindings = <
-&trans  &kp DQT   &kp LESS_THAN         &kp GREATER_THAN  &kp POUND    &kp BSLH           &kp FSLH   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp STAR     &kp BSPC
-&trans  &kp LBKT  &kp LEFT_PARENTHESIS  &kp RPAR          &kp RBKT     &kp PIPE           &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS     &kp DEL
+&trans  &kp DQT   &kp LESS_THAN         &kp GREATER_THAN  &kp POUND    &kp BSLH           &kp FSLH   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp STAR     &trans
+&trans  &kp LBKT  &kp LEFT_PARENTHESIS  &kp RPAR          &kp RBKT     &kp PIPE           &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS     &trans
 &trans  &kp LALT  &kp LEFT_BRACE        &kp RIGHT_BRACE   &kp AT_SIGN  &kp PRINTSCREEN    &kp DOT    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT  &trans
                                         &trans            &trans       &trans             &trans     &kp KP_COMMA     &kp KP_NUMBER_0
             >;
@@ -44,10 +44,10 @@
 
         raise_layer {
             // --------------------------------------------------------------------------------
-            // |     |  ~  |  É  |  &  |  Œ  |  È  |   |     |PG UP|SRLUP|     |     |      |
-            // |     |     |  `  |  ¨  |  €  |  $  |   |HOME | LFT | UP  | DWN | RGT | END  |
-            // |     |     |     |  Æ  |  À  |  Ç  |   |     |PG DW|SCRDW|     |     |      |
-            //                   | GUI |LSHFT| SPC |   |none | RSE |none |
+            // |trans|trans|trans|trans|trans|trans|   |     |PG UP|SRLUP|     |     |      |
+            // |trans|trans|trans|trans|trans|trans|   |HOME | LFT | UP  | DWN | RGT | END  |
+            // |trans|trans|trans|trans|trans|trans|   |     |PG DW|SCRDW|     |     |      |
+            //                   |trans|trans|trans|   |trans| RSE |trans|
 
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -59,16 +59,16 @@
 
         Media_layer {
             // --------------------------------------------------------------------------------
-            // |     |     |     |     |     |     |   |     |     |     |     |     |     |
-            // |     |     |     |     |     |     |   |     |     |     |     |     |     |
-            // |     |     |     |     |     |     |   |     |     |     |     |     |     |
-            //                   |     |     |     |   |     |     |     |
+            // |trans|trans|trans|trans|trans|trans|   |  /  |  7  |  8  |  9  |  *  |BSPC |
+            // |trans|trans|trans|trans|trans|trans|   |  -  |  4  |  5  |  6  |  +  | DEL |
+            // |trans|trans|trans|trans|trans|trans|   |  .  |  1  |  2  |  3  |  %  | ENT |
+            //                   |trans|trans|trans|   |trans|  ,  |  0  |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp FSLH   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp STAR     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp DOT    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT  &trans
+                        &trans  &trans  &trans    &trans     &kp KP_COMMA     &kp KP_NUMBER_0
             >;
         };
     };
