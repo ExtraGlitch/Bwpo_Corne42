@@ -23,10 +23,10 @@
             //                     | GUI | LWR | SPC |   | ENT | RSE | ALT |
 
             bindings = <
-&kp ESCAPE  &kp B  &kp W  &kp P           &kp O                &mt FR_APOS FR_QMARK    &mt EXCLAMATION CARET  &kp V  &kp D     &kp L  &kp J  &kp BSPC
-&kp TAB     &kp A  &kp U  &kp I           &kp E                &kp G                   &kp C                  &kp T  &kp S     &kp R  &kp N  &kp DELETE
-&sk LCTRL   &kp Z  &kp Y  &kp X           &mt FR_DOT FR_COLON  &kp K                   &kp M                  &kp Q  &kp G     &kp H  &kp F  &sk RSHFT
-                          &sk LEFT_SHIFT  &mo 1                &kp SPACE               &kp RET                &mo 2  &sk RALT
+&kp ESCAPE  &kp FR_B  &kp FR_W  &kp FR_P        &kp FR_O             &mt FR_APOS FR_QMARK    &mt FR_CARET FR_EXCLAMATION  &kp FR_V  &kp FR_D  &kp FR_L  &kp FR_J  &kp BSPC
+&kp TAB     &kp FR_A  &kp FR_U  &kp FR_I        &kp FR_E             &kp FR_G                &kp FR_C                     &kp FR_T  &kp FR_S  &kp FR_R  &kp FR_N  &kp DELETE
+&sk LCTRL   &kp FR_Z  &kp FR_Y  &kp FR_X        &mt FR_DOT FR_COLON  &kp FR_K                &kp FR_M                     &kp FR_Q  &kp FR_G  &kp FR_H  &kp FR_F  &sk RSHFT
+                                &sk LEFT_SHIFT  &mo 1                &kp SPACE               &kp RET                      &mo 2     &sk RALT
             >;
         };
 
@@ -62,10 +62,10 @@
 
         game_layer {
             bindings = <
-&kp ESC    &kp I  &kp Q  &kp W      &kp E      &kp R       &kp FR_SLASH  &kp FR_N7     &kp FR_N8  &kp FR_N9  &kp STAR        &kp BACKSPACE
-&kp TAB    &kp J  &kp A  &kp S      &kp D      &kp F       &kp FR_MINUS  &kp FR_N4     &kp FR_N5  &kp FR_N6  &kp FR_PLUS     &trans
-&kp GRAVE  &kp M  &kp Z  &kp X      &kp C      &kp V       &kp FR_DOT    &kp FR_N1     &kp FR_N2  &kp FR_N3  &kp FR_PERCENT  &kp ENTER
-                         &kp LSHFT  &kp LCTRL  &kp LALT    &to 0         &kp FR_COMMA  &kp FR_N0
+&kp ESC    &kp I  &kp Q  &kp W      &kp E      &kp R       &kp KP_SLASH  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_ASTERISK  &kp BACKSPACE
+&kp TAB    &kp J  &kp A  &kp S      &kp D      &kp F       &kp KP_MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &trans
+&kp GRAVE  &kp M  &kp Z  &kp X      &kp C      &kp V       &kp KP_DOT    &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT      &kp ENTER
+                         &kp LSHFT  &kp LCTRL  &kp LALT    &to 0         &kp KP_COMMA     &kp KP_NUMBER_0
             >;
         };
     };
