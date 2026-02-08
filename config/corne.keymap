@@ -22,8 +22,8 @@
             bindings = <
 &kp ESCAPE  &kp B  &kp W  &kp P           &kp O    &kp QUESTION    &kp EXCLAMATION  &kp V  &kp D     &kp L  &kp J  &kp BSPC
 &kp TAB     &kp A  &kp U  &kp I           &kp E    &kp G           &kp C            &kp T  &kp S     &kp R  &kp N  &kp DELETE
-&kp LCTRL   &kp Z  &kp Y  &kp X           &kp DOT  &kp K           &kp M            &kp Q  &kp G     &kp H  &kp F  &kp RSHFT
-                          &kp LEFT_SHIFT  &mo 1    &kp SPACE       &kp RET          &mo 2  &kp RALT
+&sk LCTRL   &kp Z  &kp Y  &kp X           &kp DOT  &kp K           &kp M            &kp Q  &kp G     &kp H  &kp F  &sk RSHFT
+                          &sk LEFT_SHIFT  &mo 1    &kp SPACE       &kp RET          &mo 2  &sk RALT
             >;
         };
 
@@ -35,9 +35,9 @@
             //                   |trans| LWR |trans|   |trans|trans|trans|
 
             bindings = <
-&trans  &kp DQT   &kp LESS_THAN         &kp GREATER_THAN  &kp POUND    &kp BSLH           &kp FSLH   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp STAR     &trans
-&trans  &kp LBKT  &kp LEFT_PARENTHESIS  &kp RPAR          &kp RBKT     &kp PIPE           &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS     &trans
-&trans  &kp LALT  &kp LEFT_BRACE        &kp RIGHT_BRACE   &kp AT_SIGN  &kp PRINTSCREEN    &kp DOT    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT  &trans
+&trans  &kp DQT   &kp LESS_THAN         &kp GREATER_THAN  &kp POUND    &kp BSLH           &kp FSLH   &trans           &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans         &trans
+&trans  &kp LBKT  &kp LEFT_PARENTHESIS  &kp RPAR          &kp RBKT     &kp PIPE           &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS       &trans
+&trans  &kp LALT  &kp LEFT_BRACE        &kp RIGHT_BRACE   &kp AT_SIGN  &kp PRINTSCREEN    &kp DOT    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT    &trans
                                         &trans            &trans       &trans             &trans     &kp KP_COMMA     &kp KP_NUMBER_0
             >;
         };
