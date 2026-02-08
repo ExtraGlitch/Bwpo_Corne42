@@ -31,10 +31,10 @@
             //                     | GUI | LWR | SPC |   | ENT | RSE | ALT |
 
             bindings = <
-&kp ESCAPE  &kp B  &kp W  &kp P           &kp O    &mt APOSTROPHE QUESTION    &kp EXCLAMATION  &kp V  &kp D     &kp L  &kp J  &kp BSPC
-&kp TAB     &kp A  &kp U  &kp I           &kp E    &kp G                      &kp C            &kp T  &kp S     &kp R  &kp N  &kp DELETE
-&sk LCTRL   &kp Z  &kp Y  &kp X           &kp DOT  &kp K                      &kp M            &kp Q  &kp G     &kp H  &kp F  &sk RSHFT
-                          &sk LEFT_SHIFT  &mo 1    &kp SPACE                  &kp RET          &mo 2  &sk RALT
+&kp ESCAPE  &kp B  &kp W  &kp P           &kp O          &mt APOS QMARK    &mt EXCLAMATION CARET  &kp V  &kp D     &kp L  &kp J  &kp BSPC
+&kp TAB     &kp A  &kp U  &kp I           &kp E          &kp G             &kp C                  &kp T  &kp S     &kp R  &kp N  &kp DELETE
+&sk LCTRL   &kp Z  &kp Y  &kp X           &mt DOT COLON  &kp K             &kp M                  &kp Q  &kp G     &kp H  &kp F  &sk RSHFT
+                          &sk LEFT_SHIFT  &mo 1          &kp SPACE         &kp RET                &mo 2  &sk RALT
             >;
         };
 
