@@ -6,9 +6,20 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+
 /* #include "keymap_bepo.h" */
 
 / {
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>, <&macro_press>;
+
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -20,10 +31,10 @@
             //                     | GUI | LWR | SPC |   | ENT | RSE | ALT |
 
             bindings = <
-&kp ESCAPE  &kp B  &kp W  &kp P           &kp O    &kp QUESTION    &kp EXCLAMATION  &kp V  &kp D     &kp L  &kp J  &kp BSPC
-&kp TAB     &kp A  &kp U  &kp I           &kp E    &kp G           &kp C            &kp T  &kp S     &kp R  &kp N  &kp DELETE
-&sk LCTRL   &kp Z  &kp Y  &kp X           &kp DOT  &kp K           &kp M            &kp Q  &kp G     &kp H  &kp F  &sk RSHFT
-                          &sk LEFT_SHIFT  &mo 1    &kp SPACE       &kp RET          &mo 2  &sk RALT
+&kp ESCAPE  &kp B  &kp W  &kp P           &kp O    &mt APOSTROPHE QUESTION    &kp EXCLAMATION  &kp V  &kp D     &kp L  &kp J  &kp BSPC
+&kp TAB     &kp A  &kp U  &kp I           &kp E    &kp G                      &kp C            &kp T  &kp S     &kp R  &kp N  &kp DELETE
+&sk LCTRL   &kp Z  &kp Y  &kp X           &kp DOT  &kp K                      &kp M            &kp Q  &kp G     &kp H  &kp F  &sk RSHFT
+                          &sk LEFT_SHIFT  &mo 1    &kp SPACE                  &kp RET          &mo 2  &sk RALT
             >;
         };
 
@@ -35,29 +46,14 @@
             //                   |trans| LWR |trans|   |trans|trans|trans|
 
             bindings = <
-&trans  &kp DQT   &kp LESS_THAN         &kp GREATER_THAN  &kp POUND    &kp BSLH           &kp FSLH   &trans           &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans         &trans
-&trans  &kp LBKT  &kp LEFT_PARENTHESIS  &kp RPAR          &kp RBKT     &kp PIPE           &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS       &trans
-&trans  &kp LALT  &kp LEFT_BRACE        &kp RIGHT_BRACE   &kp AT_SIGN  &kp PRINTSCREEN    &kp DOT    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT    &trans
+&trans  &kp DQT   &kp LESS_THAN         &kp GREATER_THAN  &kp POUND    &kp BSLH           &kp FSLH   &trans           &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans       &trans
+&trans  &kp LBKT  &kp LEFT_PARENTHESIS  &kp RPAR          &kp RBKT     &kp PIPE           &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS     &trans
+&trans  &kp LALT  &kp LEFT_BRACE        &kp RIGHT_BRACE   &kp AT_SIGN  &kp PRINTSCREEN    &kp DOT    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT  &trans
                                         &trans            &trans       &trans             &trans     &kp KP_COMMA     &kp KP_NUMBER_0
             >;
         };
 
-        raise_layer {
-            // --------------------------------------------------------------------------------
-            // |trans|trans|trans|trans|trans|trans|   |     |PG UP|SRLUP|     |     |      |
-            // |trans|trans|trans|trans|trans|trans|   |HOME | LFT | UP  | DWN | RGT | END  |
-            // |trans|trans|trans|trans|trans|trans|   |     |PG DW|SCRDW|     |     |      |
-            //                   |trans|trans|trans|   |trans| RSE |trans|
-
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        Media_layer {
+        Raise_layer {
             // --------------------------------------------------------------------------------
             // |trans|trans|trans|trans|trans|trans|   |  /  |  7  |  8  |  9  |  *  |BSPC |
             // |trans|trans|trans|trans|trans|trans|   |  -  |  4  |  5  |  6  |  +  | DEL |
