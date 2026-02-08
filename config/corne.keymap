@@ -6,10 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <./keymap_custom.h>
-
-/* #include "keymap_bepo.h" */
-
+#include <locale/keymap_custom.h>
 / {
     macros {
         new_macro: new_macro {
