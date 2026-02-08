@@ -4,9 +4,10 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include </tmp/zmk-config/config/keys_fr.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include </tmp/zmk-config/config/keys_fr.h>
+
 / {
     macros {
         new_macro: new_macro {
@@ -29,10 +30,10 @@
             //                     | GUI | LWR | SPC |   | ENT | RSE | ALT |
 
             bindings = <
-&kp ESCAPE  &kp BP_B    &kp BP_W    &kp BP_P        &kp BP_O            &kb BP_DLR   &mt BP_EXLM  BP_DCIR      &kp BP_V    &kp BP_D    &kp BP_L    &kp BP_J    &kp BSPC
-&kp TAB     &kp BP_A    &kp BP_U    &kp BP_I        &kp BP_E            &kp BP_G     &kp BP_C                  &kp BP_T    &kp BP_S    &kp BP_R    &kp BP_N    &kp DELETE
-&sk LCTRL   &kp BP_Z    &kp BP_Y    &kp BP_X        &mt BP_DOT BP_COLN  &kp BP_K     &kp BP_M                  &kp BP_Q    &kp BP_G    &kp BP_H    &kp BP_F    &sk RSHFT
-                                    &sk LEFT_SHIFT  &mo 1               &kp SPACE    &kp RET                   &mo 2       &sk RALT
+&kp ESCAPE  &kp B  &kp W  &kp P           &kp O          &mt APOS QMARK    &mt EXCLAMATION CARET  &kp V  &kp D     &kp L  &kp J  &kp BSPC
+&kp TAB     &kp A  &kp U  &kp I           &kp E          &kp G             &kp C                  &kp T  &kp S     &kp R  &kp N  &kp DELETE
+&sk LCTRL   &kp Z  &kp Y  &kp X           &mt DOT COLON  &kp K             &kp M                  &kp Q  &kp G     &kp H  &kp F  &sk RSHFT
+                          &sk LEFT_SHIFT  &mo 1          &kp SPACE         &kp RET                &to 2  &sk RALT
             >;
         };
 
@@ -44,10 +45,10 @@
             //                   |trans| LWR |trans|   |trans|trans|trans|
 
             bindings = <
-&trans  &kp BP_PIPE   &kp BP_EGRV    &kp BP_AMPR    &kp BP_EGRV    &kp BP_OE          &kp BP_DQUO    &trans           &kp BP_LBRC      &kp BP_RBRC      &trans         &trans
-&trans  &kp BP_AE     &kp BP_UGRV    &kp BP_DIAE    &kp BP_EURO    &kp PIPE           &kp BP_HASH    &kp BP_LCBR      &kp BP_LPRN      &kp BP_RPRN      &kp BP_RCBR    &trans
-&trans  &kp BP_SLSH   &kp BP_BSLS    &kp BP_CCED    &kp BP_DLR     &kp PRINTSCREEN    &kp BP_TILD    &kp BP_LDAQ      &kp BP_LABK      &kp BP_RABK      &kp BP_RDAQ    &trans
-                                     &trans         &trans         &trans             &trans         &trans           &trans
+&kp LC(C)  &kp C     &kp LESS_THAN         &kp GREATER_THAN  &kp POUND    &kp BSLH           &kp FSLH     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MULTIPLY  &kp BACKSPACE
+&trans     &kp LBKT  &kp LEFT_PARENTHESIS  &kp RPAR          &kp RBKT     &kp PIPE           &kp MINUS    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &trans
+&trans     &kp LALT  &kp LEFT_BRACE        &kp RIGHT_BRACE   &kp AT_SIGN  &kp PRINTSCREEN    &kp DOT      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT      &kp KP_ENTER
+                                           &trans            &trans       &trans             &kp KP_NLCK  &kp KP_COMMA     &kp KP_NUMBER_0
             >;
         };
 
@@ -59,10 +60,10 @@
             //                   |trans|trans|trans|   |trans|  ,  |  0  |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp FSLH   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp STAR     &kp BSPC
-&trans  &trans  &trans  &trans  &trans  &trans    &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS     &kp DELETE
-&trans  &trans  &trans  &trans  &trans  &trans    &kp DOT    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT  &kp RET
-                        &trans  &trans  &trans    &trans     &kp KP_COMMA     &kp KP_NUMBER_0
+&kp ESC    &kp I  &kp Q  &kp W      &kp E      &kp R       &kp FSLH   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp STAR     &kp BACKSPACE
+&kp TAB    &kp J  &kp A  &kp S      &kp D      &kp F       &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS     &trans
+&kp GRAVE  &kp M  &kp Z  &kp X      &kp C      &kp V       &kp DOT    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT  &trans
+                         &kp LSHFT  &kp LCTRL  &kp LALT    &to 0      &kp KP_COMMA     &kp KP_NUMBER_0
             >;
         };
     };
