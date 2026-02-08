@@ -6,7 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <keymap_custom.h>
+#include </tmp/zmk-config/config/keymap_custom.h>
 / {
     macros {
         new_macro: new_macro {
