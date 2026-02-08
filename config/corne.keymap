@@ -6,7 +6,10 @@
 
 #include "keys_fr.h"
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/backlight.h>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     keymap {
@@ -20,10 +23,10 @@
             //                     | GUI | LWR | SPC |   | ENT | RSE | ALT |
 
             bindings = <
-&kp ESCAPE  &kp B  &kp W  &kp P           &kp O          &mt APOS QMARK    &mt EXCLAMATION CARET  &kp V  &kp D     &kp L  &kp J  &kp BSPC
-&kp TAB     &kp A  &kp U  &kp I           &kp E          &kp G             &kp C                  &kp T  &kp S     &kp R  &kp N  &kp DELETE
-&sk LCTRL   &kp Z  &kp Y  &kp X           &mt DOT COLON  &kp K             &kp M                  &kp Q  &kp G     &kp H  &kp F  &sk RSHFT
-                          &sk LEFT_SHIFT  &mo 1          &kp SPACE         &kp RET                &to 2  &sk RALT
+&kp ESCAPE  &kp B  &kp W  &kp P           &kp O                &mt FR_APOS FR_QMARK    &mt EXCLAMATION CARET  &kp V  &kp D     &kp L  &kp J  &kp BSPC
+&kp TAB     &kp A  &kp U  &kp I           &kp E                &kp G                   &kp C                  &kp T  &kp S     &kp R  &kp N  &kp DELETE
+&sk LCTRL   &kp Z  &kp Y  &kp X           &mt FR_DOT FR_COLON  &kp K                   &kp M                  &kp Q  &kp G     &kp H  &kp F  &sk RSHFT
+                          &sk LEFT_SHIFT  &mo 1                &kp SPACE               &kp RET                &mo 2  &sk RALT
             >;
         };
 
@@ -35,10 +38,10 @@
             //                   |trans| LWR |trans|   |trans|trans|trans|
 
             bindings = <
-&kp LC(C)  &kp C     &kp LESS_THAN         &kp GREATER_THAN  &kp POUND    &kp BSLH           &kp FSLH     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MULTIPLY  &kp BACKSPACE
-&trans     &kp LBKT  &kp LEFT_PARENTHESIS  &kp RPAR          &kp RBKT     &kp PIPE           &kp MINUS    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &trans
-&trans     &kp LALT  &kp LEFT_BRACE        &kp RIGHT_BRACE   &kp AT_SIGN  &kp PRINTSCREEN    &kp DOT      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT      &kp KP_ENTER
-                                           &trans            &trans       &trans             &kp KP_NLCK  &kp KP_COMMA     &kp KP_NUMBER_0
+&trans  &kp FR_PIPE        &kp FR_E_ACUTE     &kt FR_CARET   &kp FR_E_GRAVE  &kp BSLH                &kp FR_DQT     &kp FR_TILDE       &kp FR_LEFT_BRACKET      &kp FR_RIGHT_BRACKET      &kp FR_SECTION      &kp BACKSPACE
+&trans  &kp FR_UNDERSCORE  &kp FR_AMPERSAND   &kp FR_UMLAUT  &kp FR_U_GRAVE  &kp FR_CURRENCY_SIGN    &kp FR_HASH    &kp FR_LEFT_BRACE  &kp FR_LEFT_PARENTHESIS  &kp FR_RIGHT_PARENTHESIS  &kp FR_RIGHT_BRACE  &to 3
+&trans  &kp FR_ASTERISK    &kp FR_POUND_SIGN  &kp FR_EURO    &kp FR_DOLLAR   &kp PRINTSCREEN         &kp FR_SQUARE  &kp FR_BACKSLASH   &kp FR_LESS_THAN         &kp FR_GREATER_THAN       &kp FR_SLASH        &kp KP_ENTER
+                                              &trans         &trans          &trans                  &trans         &trans             &trans
             >;
         };
 
@@ -50,10 +53,19 @@
             //                   |trans|trans|trans|   |trans|  ,  |  0  |
 
             bindings = <
-&kp ESC    &kp I  &kp Q  &kp W      &kp E      &kp R       &kp FSLH   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp STAR     &kp BACKSPACE
-&kp TAB    &kp J  &kp A  &kp S      &kp D      &kp F       &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS     &trans
-&kp GRAVE  &kp M  &kp Z  &kp X      &kp C      &kp V       &kp DOT    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT  &trans
-                         &kp LSHFT  &kp LCTRL  &kp LALT    &to 0      &kp KP_COMMA     &kp KP_NUMBER_0
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &kp FR_SLASH  &kp FR_N7     &kp FR_N8  &kp FR_N9  &kp STAR        &kp BACKSPACE
+&none       &none         &bl BL_CYCLE     &bl BL_DEC       &bl BL_INC       &bl BL_TOG         &kp FR_MINUS  &kp FR_N4     &kp FR_N5  &kp FR_N6  &kp FR_PLUS     &to 3
+&none       &none         &rgb_ug RGB_EFR  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG    &kp FR_DOT    &kp FR_N1     &kp FR_N2  &kp FR_N3  &kp FR_PERCENT  &kp ENTER
+                                           &kp LSHFT        &kp LCTRL        &kp LALT           &to 0         &kp FR_COMMA  &kp FR_N0
+            >;
+        };
+
+        game_layer {
+            bindings = <
+&kp ESC    &kp I  &kp Q  &kp W      &kp E      &kp R       &kp FR_SLASH  &kp FR_N7     &kp FR_N8  &kp FR_N9  &kp STAR        &kp BACKSPACE
+&kp TAB    &kp J  &kp A  &kp S      &kp D      &kp F       &kp FR_MINUS  &kp FR_N4     &kp FR_N5  &kp FR_N6  &kp FR_PLUS     &trans
+&kp GRAVE  &kp M  &kp Z  &kp X      &kp C      &kp V       &kp FR_DOT    &kp FR_N1     &kp FR_N2  &kp FR_N3  &kp FR_PERCENT  &kp ENTER
+                         &kp LSHFT  &kp LCTRL  &kp LALT    &to 0         &kp FR_COMMA  &kp FR_N0
             >;
         };
     };
