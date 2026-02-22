@@ -12,11 +12,11 @@
 #include <dt-bindings/zmk/rgb.h>
 
 
-&led_strip {
+  //&led_strip {
   // chain-length = <0>;
-  chain-length = <27>;
+  //chain-length = <27>;
   // 21 backlight + 6 glowlight
-};
+  //};
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -38,7 +38,7 @@
 
         lower_layer {
             // --------------------------------------------------------------------------------
-            // |trans| "|" |  É  |  &  |  È  |  Œ  |   |  "  |trans|  [  |  ]  |trans|trans|
+            // |trans| "|" |  É  |  &  |  È  |  Œ  |   |  "  |  ~  |  [  |  ]  |trans|trans|
             // |trans|  Æ  |  Ù  |  ¨  |  €  |  '  |   |  #  |  {  |  (  |  )  |  }  |trans|
             // |trans|  /  |  \  |  Ç  |  $  |PRTSC|   |  ~  |  «  |  <  |  >  |  »  |trans|
             //                   |trans| LWR |trans|   |trans|trans|trans|
