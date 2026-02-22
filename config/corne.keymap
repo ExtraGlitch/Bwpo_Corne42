@@ -18,10 +18,10 @@
   // 21 backlight + 6 glowlight
 //};
 
-&zmk_underglow {
-    compatible = "zmk,underglow";
-    status = "okay";
-};
+//&zmk_underglow {
+//    compatible = "zmk,underglow";
+//    status = "okay";
+//};
 
 / {
   keymap {
