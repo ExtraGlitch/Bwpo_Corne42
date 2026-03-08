@@ -39,7 +39,7 @@
             bindings = <
 &trans  &kp FR_PIPE        &kp FR_E_ACUTE     &kt FR_CARET   &kp FR_E_GRAVE  &kp BSLH                &kp FR_DQT     &kp FR_TILDE       &kp FR_LEFT_BRACKET      &kp FR_RIGHT_BRACKET      &kp FR_SECTION      &kp BACKSPACE
 &trans  &kp FR_UNDERSCORE  &kp FR_AMPERSAND   &kp FR_UMLAUT  &kp FR_U_GRAVE  &kp FR_CURRENCY_SIGN    &kp FR_HASH    &kp FR_LEFT_BRACE  &kp FR_LEFT_PARENTHESIS  &kp FR_RIGHT_PARENTHESIS  &kp FR_RIGHT_BRACE  &to 3
-&trans  &kp FR_ASTERISK    &kp FR_POUND_SIGN  &kp FR_EURO    &kp FR_DOLLAR   &kp PRINTSCREEN         &kp FR_SQUARE  &kp FR_BACKSLASH   &kp FR_LESS_THAN         &kp FR_GREATER_THAN       &kp FR_SLASH        &to 4
+&trans  &kp FR_DOLLAR      &kp FR_POUND_SIGN  &kp FR_EURO    &kp FR_A_GRAVE  &kp PRINTSCREEN         &kp FR_SQUARE  &kp FR_BACKSLASH   &kp FR_LESS_THAN         &kp FR_GREATER_THAN       &kp FR_SLASH        &to 4
                                               &trans         &trans          &trans                  &trans         &trans             &trans
             >;
         };
