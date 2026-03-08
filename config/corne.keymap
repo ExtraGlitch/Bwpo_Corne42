@@ -39,7 +39,7 @@
             bindings = <
 &trans  &kp FR_PIPE        &kp FR_E_ACUTE     &kt FR_CARET   &kp FR_E_GRAVE  &kp BSLH                &kp FR_DQT     &kp FR_TILDE       &kp FR_LEFT_BRACKET      &kp FR_RIGHT_BRACKET      &kp FR_SECTION      &kp BACKSPACE
 &trans  &kp FR_UNDERSCORE  &kp FR_AMPERSAND   &kp FR_UMLAUT  &kp FR_U_GRAVE  &kp FR_CURRENCY_SIGN    &kp FR_HASH    &kp FR_LEFT_BRACE  &kp FR_LEFT_PARENTHESIS  &kp FR_RIGHT_PARENTHESIS  &kp FR_RIGHT_BRACE  &to 3
-&trans  &kp FR_ASTERISK    &kp FR_POUND_SIGN  &kp FR_EURO    &kp FR_DOLLAR   &kp PRINTSCREEN         &kp FR_SQUARE  &kp FR_BACKSLASH   &kp FR_LESS_THAN         &kp FR_GREATER_THAN       &kp FR_SLASH        &trans
+&trans  &kp FR_ASTERISK    &kp FR_POUND_SIGN  &kp FR_EURO    &kp FR_DOLLAR   &kp PRINTSCREEN         &kp FR_SQUARE  &kp FR_BACKSLASH   &kp FR_LESS_THAN         &kp FR_GREATER_THAN       &kp FR_SLASH        &to 4
                                               &trans         &trans          &trans                  &trans         &trans             &trans
             >;
         };
@@ -52,10 +52,10 @@
             //                   |trans|trans|trans|   |trans|  ,  |  0  |
 
             bindings = <
-&bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1    &bt BT_SEL 2      &bt BT_SEL 3     &bt BT_SEL 4    &kp FR_SLASH  &kp FR_N7  &kp FR_N8  &kp FR_N9  &kp STAR        &kp BACKSPACE
-&mkp RCLK          &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_UP      &mmv MOVE_RIGHT  &mkp LCLK       &kp FR_MINUS  &kp FR_N4  &kp FR_N5  &kp FR_N6  &kp FR_PLUS     &to 3
-&kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_PREV      &kp K_PLAY_PAUSE  &kp K_NEXT       &none           &kp FR_DOT    &kp FR_N1  &kp FR_N2  &kp FR_N3  &kp FR_PERCENT  &kp ENTER
-                                                    &trans            &trans           &kp LALT        &kp FR_COMMA  &trans     &kp FR_N0
+&bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1       &kp K_SCROLL_UP    &bt BT_SEL 2      &bt BT_SEL 3    &bt BT_SEL 4  &kp K_SCROLL_UP    &kp PAGE_UP    &trans    &trans     &trans
+&mkp RCLK   &mmv MOVE_LEFT  &mmv MOVE_DOWN     &mmv MOVE_UP       &mmv MOVE_RIGHT   &mkp LCLK       &kp HOME      &kp LEFT_ARROW     &kp UP         &kp DOWN  &kp RIGHT  &kp END
+&trans      &trans          &kp K_VOLUME_DOWN  &kp K_SCROLL_DOWN  &kp K_VOLUME_UP   &kp K_MUTE      &trans        &kp K_SCROLL_DOWN  &kp PAGE_DOWN  &trans    &trans     &trans
+                                               &kp K_PREV         &kp K_PLAY_PAUSE  &kp K_NEXT      &trans        &trans             &trans
             >;
         };
 
@@ -65,6 +65,15 @@
 &kp TAB    &kp J  &kp A  &kp S      &kp D      &kp F       &kp KP_MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &trans
 &kp GRAVE  &kp M  &kp Z  &kp X      &kp C      &kp V       &kp KP_DOT    &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT      &kp ENTER
                          &kp LSHFT  &kp LCTRL  &kp LALT    &to 0         &kp KP_COMMA     &kp KP_NUMBER_0
+            >;
+        };
+
+        Numpad {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp FR_SLASH  &kp FR_N7     &kp FR_N8  &kp FR_N9  &kp STAR        &kp BACKSPACE
+&trans  &trans  &trans  &trans  &trans  &trans    &kp FR_MINUS  &kp FR_N4     &kp FR_N5  &kp FR_N6  &kp FR_PLUS     &to 0
+&trans  &trans  &trans  &trans  &trans  &trans    &kp FR_DOT    &kp FR_N1     &kp FR_N2  &kp FR_N3  &kp FR_PERCENT  &kp ENTER
+                        &trans  &trans  &trans    &kp LALT      &kp FR_COMMA  &kp FR_N0
             >;
         };
     };
